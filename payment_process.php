@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('db.php');
+date_default_timezone_set('Asia/Kolkata');
 if(isset($_POST['amt']) && isset($_POST['name'])&& isset($_POST['email'])&& isset($_POST['cause'])){
     $amt=$_POST['amt'];
     $name=$_POST['name'];
