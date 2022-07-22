@@ -10129,6 +10129,7 @@ textarea.form-control {
       color: #eec857; }
 
 #ftco-loader {
+  display: none;
   position: fixed;
   width: 96px;
   height: 96px;
@@ -10149,6 +10150,7 @@ textarea.form-control {
   z-index: 1000; }
 
 #ftco-loader.fullscreen {
+  display: none;
   padding: 0;
   left: 0;
   top: 0;
@@ -10163,6 +10165,7 @@ textarea.form-control {
   box-shadow: none; }
 
 #ftco-loader.show {
+  display: none;
   -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
   -o-transition: opacity .4s ease-out, visibility 0s linear 0s;
   transition: opacity .4s ease-out, visibility 0s linear 0s;
@@ -10170,6 +10173,7 @@ textarea.form-control {
   opacity: 1; }
 
 #ftco-loader .circular {
+  display: none;
   -webkit-animation: loader-rotate 2s linear infinite;
   animation: loader-rotate 2s linear infinite;
   position: absolute;
@@ -10181,6 +10185,7 @@ textarea.form-control {
   transform: rotate(0deg); }
 
 #ftco-loader .path {
+  display: none;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
