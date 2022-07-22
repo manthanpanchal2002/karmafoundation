@@ -66,7 +66,7 @@
 					<li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
 					<li class="nav-item"><a href="photogallery.html" class="nav-link">Gallery</a></li>
 					<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-					<li class="nav-item cta"><a href="contact.html" class="nav-link">Donate</a></li>
+					<li class="nav-item cta"><a href="donate/index.php" class="nav-link">Donate</a></li>
 				</ul>
 			</div>
 		</div>
@@ -178,14 +178,14 @@
 								<span class="number" data-number="24781">0</span>
 							</p>
 						</div>
-						<form action="#" class="appointment">
+						<form class="appointment">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
 										<label for="name">Full Name</label>
 										<div class="input-wrap">
 											<div class="icon"><span class="fa fa-user"></span></div>
-											<input type="text" class="form-control" placeholder="">
+											<input type="text" name="name" id="name" class="form-control" placeholder="">
 										</div>
 									</div>
 								</div>
@@ -194,7 +194,7 @@
 										<label for="name">Email Address</label>
 										<div class="input-wrap">
 											<div class="icon"><span class="fa fa-paper-plane"></span></div>
-											<input type="email" class="form-control" placeholder="">
+											<input type="email" name="email" id="email" class="form-control" placeholder="">
 										</div>
 									</div>
 								</div>
@@ -204,20 +204,20 @@
 										<div class="form-field">
 											<div class="select-wrap">
 												<div class="icon"><span class="fa fa-chevron-down"></span></div>
-												<select name="" id="" class="form-control">
-													<option value=""></option>
-													<option value="">Cleanliness</option>
-													<option value="">Prayas</option>
-													<option value="">Jeevan Shrishti</option>
-													<option value="">Shri N. Patel Scholarships</option>
-													<option value="">Ahmedabad Book club</option>
-													<option value="">Gujarati Book Club</option>
-													<option value="">Sahara</option>
-													<option value="">Piva</option>
-													<option value="">Against Depression</option>
-													<option value="">Science Club</option>
-													<option value="">Pandemic</option>
-													<option value="">Gnyan Kumbh</option>
+												<select name="cause" id="cause" class="form-control">
+													<option value="any" hidden>Leave it on us</option>
+													<option value="Cleanliness">Cleanliness</option>
+													<option value="Prayas">Prayas</option>
+													<option value="Jeevan Shrishti">Jeevan Shrishti</option>
+													<option value="Shri N. Patel Scholarships">Shri N. Patel Scholarships</option>
+													<option value="Ahmedabad Book club">Ahmedabad Book club</option>
+													<option value="Gujarati Book Club">Gujarati Book Club</option>
+													<option value="Sahara">Sahara</option>
+													<option value="Piva">Piva</option>
+													<option value="Against Depression">Against Depression</option>
+													<option value="Science Club">Science Club</option>
+													<option value="Pandemic">Pandemic</option>
+													<option value="Gnyan Kumbh">Gnyan Kumbh</option>
 												</select>
 											</div>
 										</div>
@@ -228,47 +228,13 @@
 										<label for="name">Amount</label>
 										<div class="input-wrap">
 											<div class="icon"><span class="fa fa-money"></span></div>
-											<input type="text" class="form-control" placeholder="Rs/- 500">
+											<input type="text" name="amt" id="amt" class="form-control" placeholder="Rs/- 500">
 										</div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<label for="name">Payment Method</label>
-										<div class="d-lg-flex">
-											<div class="form-radio mr-3">
-												<div class="radio">
-													<label>
-														<input type="radio" name="radio-input" checked>
-														<span class="checkmark"></span>
-														<span class="fill-control-description">Credit Card</span>
-													</label>
-												</div>
-											</div>
-											<div class="form-radio mr-3">
-												<div class="radio">
-													<label>
-														<input type="radio" name="radio-input">
-														<span class="checkmark"></span>
-														<span class="fill-control-description">Paytm</span>
-													</label>
-												</div>
-											</div>
-											<div class="form-radio">
-												<div class="radio">
-													<label>
-														<input type="radio" name="radio-input">
-														<span class="checkmark"></span>
-														<span class="fill-control-description">G-Pay</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<input type="submit" value="Donate Now" class="btn btn-secondary py-3 px-4">
+										<input type="button" name="btn" id="btn" value="Donate Now" onclick="pay_now()" class="btn btn-secondary py-3 px-4">
 									</div>
 								</div>
 							</div>
@@ -1004,11 +970,10 @@
 					stroke="#F96D00" />
 		</svg></div>
 
-
-	<script src="js/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" ></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.stellar.min.js"></script>
@@ -1018,9 +983,52 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-	<script
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="js/google-map.js"></script>
+
+	<!-- JavaScript Bundle with Popper -->
+
+<!----------------------------DO NOT REMOVE OR MODIFY-->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+	function pay_now() {
+		var name = jQuery('#name').val();
+		var amt = jQuery('#amt').val();
+		var email = jQuery('#email').val();
+		var cause = jQuery('#cause').val();
+	
+		jQuery.ajax({
+			type: 'post',
+			url: 'payment_process.php',
+			data: "amt=" + amt + "&name=" + name + "&email=" + email + "&cause=" + cause,
+			success: function(result) {
+				var options = {
+					"key": "rzp_test_Li9tlTghSp80pg",
+					"amount": amt * 100,
+					"currency": "INR",
+					"name": "Karma Foundation",
+					"description": "You are donating to Karma Foundation",
+					"image": "",
+					"handler": function(response) {
+						jQuery.ajax({
+							type: 'post',
+							url: 'payment_process.php',
+							data: "payment_id=" + response.razorpay_payment_id,
+							success: function(result) {
+								window.location.href = "thank_you.html";
+							}
+						});
+					}
+				};
+				var rzp1 = new Razorpay(options);
+				rzp1.open();
+			}
+		});
+	
+	
+	}
+ </script>
+<!----------------------------DO NOT REMOVE-->
+
 	<script src="js/main.js"></script>
 
 </body>
