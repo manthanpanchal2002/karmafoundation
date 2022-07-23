@@ -1,0 +1,10 @@
+{
+    "name": "vendor/name",
+    "authors": [
+        {
+            "name": "Dhyey Kathiriya",
+            "email": "dhk22500@gmail.com"
+        }
+    ],
+    "require": {}
+}
